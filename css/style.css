@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2? família=Jost&family=Lato&family=Poppins&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -24,6 +26,11 @@ header {
 
 #fundo-inicio {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    
     box-sizing: border-box;
     position: absolute;
     width: 341px;
@@ -35,15 +42,24 @@ header {
     border-radius: 70px;
 }
 
-#fundo-inicio h1 {
-    font-family: 'Jost';
-    font-weight: 500;
-    font-size: 9rem;
-    line-height: 43px;
-    color: #000000;
+#inicio-titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30rem;
+    color: red;
 
 }
 
-#fundo-inicio p{
-    
+#fundo-inicio div p {
+    text-align: center;
+    font-family: Jost, Lato, arial;
+    font-size: 30rem;
+}
+
+#fundo-inicio button {
+    border: 6px solid #000000;
+    border-radius: 50px;
+    padding: 25px 40px;
+    background: rgba(27, 27, 27, 0.01);
+    font-family: Lato, arial;
+    font-size: 5rem;
 }
