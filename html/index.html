@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Site WinRAR</title>
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="shortcut icon" href="../imagens/winrar-img.png">
     </head>
     <body>
         <header>
@@ -14,15 +15,23 @@
                 <label class="menu__btn" for="menu__toggle">
                   <span></span>
                 </label>
-            
                 <ul class="menu__box">
                   <li><a class="menu__item" href="#sobre">Sobre</a></li>
                   <li><a class="menu__item" href="#dowloads">Dowloads</a></li>
-                  <li><a class="menu__item" href="#contato">Suporte</a></li>
-                  <li><a class="menu__item" href="#footer">Redes sociais</a></li>
+                  <li><a class="menu__item" href="#contato">Contato</a></li>
+                  <li><a class="menu__item" href="#footer-itens">Redes Sociais</a></li>
                 </ul>
               </div>
             <img src="../imagens/logo-WinRAR.png" alt="">
+
+            <nav>
+                <ul id="menu-nav">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#dowloads">Dowloads</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#footer-itens">Redes sociais</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
             <section id="inicio">
@@ -54,7 +63,6 @@
                         <h1>Dowloads</h1> 
                         <h2>Escolha sua versão</h2>
                     </div>
-
                         <div id="fundo-dowloads-itens">
                         <div id="dowload-item">
                             <img src="../imagens/windows-logo.png" alt="">
@@ -77,13 +85,50 @@
                             <button>Baixar</button>
                         </div>
                     </div>
-
                 </div>
-
+            </section>
+            <section id="contato">
+                <div id="contato-fundo">
+                    <h1>Contate-nos</h1>
+                    <div id="contato-digitar">
+                        <div id="contato-tituloEtext">
+                            <label id="contato-text-titulos" for="name">Nome</label>
+                            <input id="contato-text" type="text">
+                        </div>
+                        <div id="contato-tituloEtext">
+                            <label id="contato-text-titulos" for="email">E-mail</label>
+                            <input id="contato-text" type="text">
+                        </div>
+                        <div id="contato-tituloEtext">
+                            <label id="contato-text-titulos" for="mensage">Mensagem</label>
+                            <input id="contato-text-mensage" type="text">
+                        </div>
+                    </div>
+                    <button>Enviar</button>
+                </div>
             </section>
         </main>
         <footer>
-            
+            <div id="footer-rede">
+                <h1>Siga-nos nas redes sociais</h1>
+                <div id="footer-img">
+                    <img src="../imagens/instagram-logo.jpg" alt="">
+                    <img src="../imagens/twitter-logo.jpg" alt="">
+                    <img src="../imagens/youtube-logo.jpg" alt="">
+                    <img src="../imagens/facebook-logo.jpg" alt="">
+                </div>
+            </div>
+            <div id="footer-menu">
+                <div>
+                    <h1>Menu</h1>
+                </div>
+                <div id="footer-itens">
+                    <a href="#inicio">inicio</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#dowloads">Dowloads</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
