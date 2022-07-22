@@ -653,11 +653,6 @@ nav {
       border-radius: 30px;
     }
 
-
-    #contato-tituloEtext {
-
-    }
-
     #contato-text-mensage {
       width: 40vw;
       height: 15vh;
@@ -669,7 +664,27 @@ nav {
       padding: 3vh 5vw;
     }
 
+    footer {
+      flex-direction: row;
+      height: 30vh;
+    }
 
+    #footer-rede h1 {
+      font-size: 2rem;
+    }
+
+    #footer-img img {
+      width: 14%;
+    }
+
+    #footer-menu h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5vh;
+    }
+
+    #footer-menu a {
+      font-size: 2rem;
+    }
 
 
 
