@@ -34,7 +34,10 @@ nav {
 
 #inicio {
     background-image: url(../imagens/imagem-inicio.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     display: flex;
     width: 100%;
     height: 85vh;
@@ -77,6 +80,12 @@ nav {
     font-family: Lato, arial;
     font-size: 5rem;
     cursor: pointer;
+    transition: all 400ms ease;
+}
+
+#fundo-inicio button:hover{
+  background: black;
+  color: #fff;
 }
 
 /* menu hamburguer inicio */
@@ -186,11 +195,10 @@ nav {
     border-bottom: 1px solid #000;
   }
 
-#titulo-fundo-sobre h1 {
+  #titulo-fundo-sobre h1 {
     font-family: Jost, Lato, arial;
     font-style: normal;
     font-size: 8rem;
-    line-height: 36px;
     font-weight: bolder;
     padding-top: 2vh;
     padding-bottom: 8vh;
@@ -212,10 +220,9 @@ nav {
 
   #fundo-sobre p {
     font-family: Jost, Lato, arial;
-    font-style: normal;
     font-weight: 400;
     font-size: 6rem;
-    line-height: 4vh;
+    line-height: 5vh;
     text-align: center;
     margin: 0 10vw;
   }
@@ -223,6 +230,14 @@ nav {
   #itens-fundo-sobre h2 {
     font-size: 8rem;
     font-family: Jost, Lato, arial;
+  }
+
+  #sobre-img{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2vh;
   }
 
   #dowloads {
@@ -244,7 +259,7 @@ nav {
     width: 92vw;
     height: 230vh;
     background: rgba(207, 207, 207, 0.65);
-    border: 2px solid #000000;
+    border: 5px solid #000000;
     border-radius: 80px;
 
   }
@@ -299,14 +314,20 @@ nav {
   }
 
   #dowload-item button {
-    width: 112px;
-    height: 56px;
+    padding: 3vh 10vw;
     background: #000000;
     border-radius: 50px;
     cursor: pointer;
     border: none;
     color: #fff;
     font-family: Lato, arial;
+    transition: all 400ms ease;
+  }
+
+  #dowload-item button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #000;
+    box-shadow: inset  0 0 0 5px #000;
   }
 
   #contato {
@@ -381,6 +402,12 @@ nav {
     font-family: Lato, arial;
     font-size: 5rem;
     cursor: pointer;
+    transition: all 400ms ease;
+  }
+
+  #contato-fundo button:hover{
+    background: black;
+    color: #fff;
   }
 
   footer {
@@ -447,7 +474,8 @@ nav {
     color: #000;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
+
     .hamburger-menu , .menu__box {
       display: none;
     }
@@ -463,12 +491,30 @@ nav {
     }
 
     #menu-nav a {
+      position: relative;
       text-decoration: none;
       color: #000;
       font-family: Poppins, Jost, Roboto;
       font-size: 1.5rem;
       font-weight: bold;
+      padding: 0 1vw;;
     }
+
+    #menu-nav a:after {
+      position: absolute;
+      content: "";
+      background-color: #000;
+      height: 3px;
+      width: 0;
+      left: 0;
+      bottom: -10px;
+      transition: 0.3s;
+    }
+
+    #menu-nav a:hover:after {
+      width: 100%;
+    } 
+
 
     nav {
       display: block;
@@ -486,6 +532,154 @@ nav {
     #inicio {
       height: 90vh;
     }
+
+    #fundo-inicio {
+      width: 50vw;
+      height: 70vh;
+    }
+
+    #inicio-titulo {
+      font-size: 4rem;
+    }
+
+    #fundo-inicio p {
+      font-size: 2rem;
+      margin: 0 15vw;
+      line-height: 5vh;
+    }
+
+    #fundo-inicio button {
+      padding: 2vh 3vw;
+      font-size: 2rem;
+    }
+
+    #sobre {
+      height: 110vh;
+    }
+
+    #fundo-sobre {
+      width: 60vw;
+      height: 95vh;
+    }
+
+    #titulo-fundo-sobre h1 {
+      font-size: 3rem;
+    }
+
+    #itens-fundo-sobre {
+      width: 50vw;
+      height: 35vh;
+      flex-direction: row;
+      justify-content: space-evenly;
+      border-radius: 80px;
+    }
+
+    #fundo-sobre p {
+      font-size: 1.8rem;
+      margin: 0 14vw;
+      line-height: 5vh;
+    }
+
+    #dowloads {
+      height: 110vh;
+    }
+
+    #fundo-dowloads {
+      width: 70vw;
+      height: 90vh;
+    }
+
+    #itens-fundo-sobre h2 {
+      font-size: 1rem;
+    }
+
+    #itens-fundo-sobre img {
+      width: 100%;
+    }
+
+    #fundo-dowloads-titulos {
+      margin-top: 3vh;
+    }
+
+    #fundo-dowloads-titulos h1 {
+      font-size: 3rem;
+    }
+
+    #fundo-dowloads-titulos h2 {
+      font-size: 2rem;
+      padding: 0 3vw 4vw 3vw;
+    }
+
+    #fundo-dowloads-itens {
+      flex-direction: row;
+    }
+
+    #dowload-item {
+      width: 13vw;
+      height: 50vh;
+      border-radius: 50px;
+    }
+
+    #dowload-item p {
+      font-size: 1.7rem;
+    }
+
+    #dowload-item button {
+      padding: 3vh 4vw;
+      font-size: 1.2rem;
+    }
+
+    #contato {
+      height: 110vh;
+    }
+
+    #contato-fundo {
+      width: 60vw;
+      height: 90vh;
+    }
+
+    #contato-fundo h1 {
+      font-size: 3rem;
+    } 
+
+  
+    #contato-text-titulos {
+      font-size: 2rem;
+    }
+
+    #contato-text {
+      width: 40vw;
+      height: 5vh;
+      border-radius: 30px;
+    }
+
+
+    #contato-tituloEtext {
+
+    }
+
+    #contato-text-mensage {
+      width: 40vw;
+      height: 15vh;
+      border-radius: 25px;
+    }
+
+    #contato-fundo button {
+      font-size: 1.5rem;
+      padding: 3vh 5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
